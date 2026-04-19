@@ -14,7 +14,7 @@ export default function PrivacyPolicyPage() {
       <Section className="py-20">
         <Container className="max-w-4xl">
           <Link href="/" className="text-primary-400 hover:text-primary-300 text-sm mb-8 inline-block">
-            &larr; Back to Home
+            ← Back to Home
           </Link>
           <h1 className="font-heading font-bold text-3xl md:text-4xl text-text-primary mb-4">
             Privacy Policy
