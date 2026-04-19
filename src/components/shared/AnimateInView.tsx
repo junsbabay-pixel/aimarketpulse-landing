@@ -14,14 +14,8 @@ const animClasses: Record<AnimType, string> = {
 };
 
 const delayClasses: Record<number, string> = {
-  100: 'delay-100',
-  200: 'delay-200',
-  300: 'delay-300',
-  400: 'delay-400',
-  500: 'delay-500',
-  600: 'delay-600',
-  700: 'delay-700',
-  800: 'delay-800',
+  100: 'delay-100', 200: 'delay-200', 300: 'delay-300', 400: 'delay-400',
+  500: 'delay-500', 600: 'delay-600', 700: 'delay-700', 800: 'delay-800',
 };
 
 interface AnimateInViewProps {
@@ -32,9 +26,6 @@ interface AnimateInViewProps {
   style?: CSSProperties;
   margin?: string;
   as?: keyof JSX.IntrinsicElements;
-  href?: string;
-  target?: string;
-  rel?: string;
 }
 
 export function AnimateInView({ children, anim = 'fade-in-up', delay, className = '', style, margin, as: Tag = 'div', ...rest }: AnimateInViewProps) {
@@ -43,7 +34,7 @@ export function AnimateInView({ children, anim = 'fade-in-up', delay, className 
   const delayClass = delay && isInView ? delayClasses[delay] ?? '' : '';
 
   return (
-    // @ts-expect-error dynamic tag + rest props
+    // @ts-expect-error dynamic tag
     <Tag ref={ref} className={`${animClass} ${delayClass} ${className}`} style={style} {...rest}>
       {children}
     </Tag>
