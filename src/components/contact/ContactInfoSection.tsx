@@ -9,7 +9,6 @@ export default function ContactInfoSection() {
           Other Ways to Reach Us
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          {/* Left: Email + Social */}
           <div>
             <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">
               Email
@@ -25,34 +24,18 @@ export default function ContactInfoSection() {
               Social
             </h3>
             <div className="flex gap-4">
-              <a
-                href="https://x.com/aimarketpulse"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-500 hover:text-gray-900 transition-colors"
-              >
+              <a href="https://x.com/aimarketpulse" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-900 transition-colors">
                 X
               </a>
-              <a
-                href="https://linkedin.com/company/aimarketpulse"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-500 hover:text-gray-900 transition-colors"
-              >
+              <a href="https://linkedin.com/company/aimarketpulse" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-900 transition-colors">
                 LinkedIn
               </a>
-              <a
-                href="https://reddit.com/r/aimarketpulse"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-500 hover:text-gray-900 transition-colors"
-              >
+              <a href="https://reddit.com/r/aimarketpulse" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-900 transition-colors">
                 Reddit
               </a>
             </div>
           </div>
 
-          {/* Right: Response Time */}
           <div>
             <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">
               Response Time

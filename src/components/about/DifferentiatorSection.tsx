@@ -20,7 +20,7 @@ const items = [
   {
     num: '04',
     title: '$19/Month vs $24,000/Year',
-    desc: '1/1000 the cost of Bloomberg Terminal. Professional-grade research shouldn\'t require a corporate budget.',
+    desc: "1/1000 the cost of Bloomberg Terminal. Professional-grade research shouldn't require a corporate budget.",
     tag: 'Affordable · Accessible',
   },
 ]
