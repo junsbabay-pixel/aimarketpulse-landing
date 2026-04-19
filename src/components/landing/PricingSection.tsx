@@ -2,81 +2,11 @@
 
 export function PricingSection() {
   const plans = [
-    {
-      name: 'Free Trial',
-      price: '$0',
-      period: '/ 7 days',
-      badge: 'Free Trial',
-      badgeColor: 'bg-gray-100 text-gray-600',
-      assets: '1 asset',
-      emails: '1 email',
-      features: [
-        '1 full report',
-        'PDF download',
-        'All report sections',
-      ],
-    },
-    {
-      name: 'Basic',
-      price: '$19',
-      period: '/mo',
-      badge: 'Best Value',
-      badgeColor: 'bg-gray-100 text-gray-600',
-      assets: '5 assets',
-      emails: '1 email',
-      features: [
-        '5 reports/month',
-        'PDF + online reader',
-        'All asset classes',
-        '50+ sources',
-      ],
-    },
-    {
-      name: 'Plus',
-      price: '$39',
-      period: '/mo',
-      badge: '⭐ Most Popular',
-      badgeColor: 'bg-indigo-50 text-indigo-700',
-      highlighted: true,
-      assets: '20 assets',
-      emails: '1 email',
-      features: [
-        '20 reports/month',
-        'PDF + online reader',
-        'Priority generation',
-        'All report sections',
-      ],
-    },
-    {
-      name: 'Pro',
-      price: '$59',
-      period: '/mo',
-      badge: 'Pro',
-      badgeColor: 'bg-gray-100 text-gray-600',
-      assets: '50 assets',
-      emails: '3 emails',
-      features: [
-        '50 reports/month',
-        '3 team seats',
-        'Priority generation',
-        'Export to CSV',
-      ],
-    },
-    {
-      name: 'Max',
-      price: '$99',
-      period: '/mo',
-      badge: 'Max',
-      badgeColor: 'bg-gray-100 text-gray-600',
-      assets: '200 assets',
-      emails: '5 emails',
-      features: [
-        '200 reports/month',
-        '5 team seats',
-        'API access',
-        'Dedicated support',
-      ],
-    },
+    { name: 'Free Trial', price: '$0', period: '/ 7 days', assets: '1 asset', features: ['1 full report', 'PDF download', 'All report sections'] },
+    { name: 'Basic', price: '$19', period: '/mo', assets: '5 assets', features: ['5 reports/month', 'PDF + online reader', 'All asset classes', '50+ sources'] },
+    { name: 'Plus', price: '$39', period: '/mo', badge: 'Most Popular', highlighted: true, assets: '20 assets', features: ['20 reports/month', 'PDF + online reader', 'Priority generation', 'All report sections'] },
+    { name: 'Pro', price: '$59', period: '/mo', assets: '50 assets', features: ['50 reports/month', '3 team seats', 'Priority generation', 'Export to CSV'] },
+    { name: 'Max', price: '$99', period: '/mo', assets: '200 assets', features: ['200 reports/month', '5 team seats', 'API access', 'Dedicated support'] },
   ];
 
   return (
@@ -98,16 +28,12 @@ export function PricingSection() {
                 plan.highlighted ? 'border-indigo-500 shadow-md' : 'border-gray-200'
               }`}
             >
-              <span className={`inline-block self-start text-xs font-semibold px-3 py-1 rounded-full mb-4 ${plan.badgeColor}`}>
-                {plan.badge}
-              </span>
               <h3 className="text-lg font-semibold text-gray-900 mb-1">{plan.name}</h3>
               <div className="mb-4">
                 <span className="text-3xl font-bold text-gray-900">{plan.price}</span>
                 <span className="text-gray-500 text-sm">{plan.period}</span>
               </div>
-              <p className="text-sm text-gray-500 mb-1">{plan.assets}</p>
-              <p className="text-sm text-gray-500 mb-6">{plan.emails}</p>
+              <p className="text-sm text-gray-500 mb-6">{plan.assets}</p>
               <ul className="space-y-2 mb-8 flex-1">
                 {plan.features.map((f) => (
                   <li key={f} className="flex items-start text-sm text-gray-600">

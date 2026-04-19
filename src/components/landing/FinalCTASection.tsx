@@ -12,12 +12,9 @@ export function FinalCTASection() {
           Stay in the loop
         </h2>
         <p className="text-gray-500 text-sm mb-8 max-w-md mx-auto">
-          Get monthly updates on new assets, features, and market insights. No spam — just one email per month.
+          Get monthly updates on new assets, features, and market insights.
         </p>
-        <form
-          onSubmit={(e) => e.preventDefault()}
-          className="flex gap-2 max-w-[420px] mx-auto"
-        >
+        <form onSubmit={(e) => e.preventDefault()} className="flex gap-2 max-w-[420px] mx-auto">
           <input
             type="email"
             value={email}
@@ -25,10 +22,7 @@ export function FinalCTASection() {
             placeholder="you@example.com"
             className="flex-1 px-4 py-2.5 text-sm border border-gray-200 rounded-lg bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
           />
-          <button
-            type="submit"
-            className="px-5 py-2.5 text-sm font-semibold text-white bg-indigo-600 rounded-lg hover:bg-indigo-700 transition-colors shrink-0"
-          >
+          <button type="submit" className="px-5 py-2.5 text-sm font-semibold text-white bg-indigo-600 rounded-lg hover:bg-indigo-700 transition-colors shrink-0">
             Subscribe
           </button>
         </form>
