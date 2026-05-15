@@ -5,6 +5,7 @@ const PROXY_SECRET = "ap_proxy_2026_secure";
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method !== "POST") {
+    res.setHeader("Allow", "POST");
     return res.status(405).json({ error: "Method not allowed" });
   }
 
