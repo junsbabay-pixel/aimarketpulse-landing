@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import * as crypto from "crypto";
 
 const SUBSTACK_API = "https://substack.com/api/v1/comment/feed";
 const PROXY_SECRET = "ap_proxy_2026_secure";
