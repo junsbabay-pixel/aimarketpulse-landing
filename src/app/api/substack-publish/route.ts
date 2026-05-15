@@ -1,12 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
+import * as crypto from "crypto";
 
-const API_KEY = process.env.SUBSTACK_PROXY_KEY;
 const SUBSTACK_API = "https://substack.com/api/v1/comment/feed";
+const PROXY_SECRET = "ap_proxy_2026_secure";
 
 export async function POST(req: NextRequest) {
-  const authHeader = req.headers.get("authorization");
-  const token = authHeader?.replace("Bearer ", "");
-  if (!API_KEY || token !== API_KEY) {
+  const authHeader = req.headers.get("x-proxy-secret") || "";
+  if (authHeader !== PROXY_SECRET) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
